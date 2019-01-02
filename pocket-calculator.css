@@ -1,3 +1,49 @@
+* {
+  color: #666699;
+}
+
+@font-face {
+font-family: "digital-7";
+src: url("../fonts/digital-7.ttf");
+}
+
+@font-face {
+font-family: "webdings";
+src: url("../fonts/webdings.ttf");
+}
+
+@font-face {
+font-family: "cornerstone";
+src: url("../fonts/cornerstone.ttf");
+}
+
 body {
-  
+ text-align: center
+}
+
+div.header1 {
+  line-height: 0.5;
+  font: times;
+  font-family: monospace;
+}
+
+span.webdings1 {
+  font: webdings;
+  font-style: oblique;
+}
+
+span.webdings2 {
+  font: webdings;
+  font-style: oblique;
+}
+
+canvas {
+  border-radius: 2;
+  border-style: double;
+
+}
+
+td.button {
+  text-align: center;
+  font: cornerstone;
 }
