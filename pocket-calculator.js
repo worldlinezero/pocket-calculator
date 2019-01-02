@@ -40,5 +40,7 @@ function negation {
 
 function cancellation {
 //A/C button - clears current display and all memory
-
+const canvas = document.getElementById("calcDisplay");
+const ctx = canvas.getContext("2d");
+ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
