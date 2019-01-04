@@ -1,24 +1,37 @@
 * {
   color: #666699;
+  position: relative;
 }
 
 @font-face {
-font-family: "digital-7";
-src: url("../fonts/digital-7.ttf");
+font-family: "Digital-7";
+src: url("./pocket-calculator/fonts/digital-7.ttf");
 }
 
 @font-face {
-font-family: "webdings";
-src: url("../fonts/webdings.ttf");
+font-family: "Webdings";
+src: url("./pocket-calculator/fonts/webdings.ttf");
 }
 
 @font-face {
-font-family: "cornerstone";
-src: url("../fonts/cornerstone.ttf");
+font-family: "Cornerstone";
+src: url("./pocket-calculator/fonts/cornerstone.ttf");
+}
+
+a[href*="ucvts"] {
+  font-style: italic;
+  font: courier;
+}
+
+a[href*="calculator"] {
+  font-style: bold;
+  font: cornerstone;
 }
 
 body {
- text-align: center
+ text-align: center;
+ font-weight: bold;
+ font-size: 12pt
 }
 
 div.header1 {
@@ -28,11 +41,13 @@ div.header1 {
 }
 
 span.webdings1 {
+  line-height: 0.5;
   font: webdings;
   font-style: oblique;
 }
 
 span.webdings2 {
+  line-height: 0.5;
   font: webdings;
   font-style: oblique;
 }
@@ -43,7 +58,44 @@ canvas {
 
 }
 
-td.button {
-  text-align: center;
+button {
   font: cornerstone;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  align-items: center;
+  border-radius: 12px;
+  border-width: 2px;
+  border-style: solid;
+  box-shadow: 0 5px #888888;
+  border-color: DimGray;
+  background-color:
+}
+
+td > button.operation {
+  height: 100px;
+  width: 150px;
+  background-color: #ff6e27 ;
+  box-shadow: 0 5px #aa5a00;
+}
+
+td > button.nonzero {
+
+}
+
+td > button#zero {
+
+}
+
+button.operation:hover {
+ background-color: Chocolate;
+}
+
+button.nonzero:hover {
+
+}
+
+.footer {
+  text-align: center;
+  color: DarkGray;
 }
