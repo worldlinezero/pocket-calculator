@@ -12,34 +12,42 @@
       <table>
         <tbody>
           <tr>
-            <td>
-              <p class="output" id="output1">
-                <canvas width="2048px" height="128px" id="calcDisplay">
-                </canvas>
-              </p>
-          </td>
+            <td><button class="operation" onclick="cancellation();">A/C</button></td>
+            <td><button class="operation" onclick="negation();">⁺∕₋</button></td>
+            <td><button class="operation" onclick="summation();">=</button></td>
+            <td><button class="operation" onclick="percentagization();">%</button></td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><button class="operation" onclick="addition();">+</button></td>
+            <td><button class="operation" onclick="subtraction();">-</button></td>
+            <td><button class="operation" onclick="multiplication();">X</button></td>
+            <td><button class="operation" onclick="division();">÷</button></td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><button class="nonzero" onclick="nine();">9</button></td>
+            <td><button class="nonzero" onclick="eight();">8</button></td>
+            <td><button class="nonzero" onclick="seven();">7</button></td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><button class="nonzero" onclick="six();">6</button></td>
+            <td><button class="nonzero" onclick="five();">5</button></td>
+            <td><button class="nonzero" onclick="four();">4</button></td>
+          </tr>
+          <tr>
+            <td><button class="nonzero" onclick="three();">3</button></td>
+            <td><button class="nonzero" onclick="two();">2</button></td>
+            <td><button class="nonzero" onclick="one();">1</button></td>
+          </tr>
+          <tr>
+            <td><button onclick="decimalization();">.</button></td>
+            <td><button id="zero" onclick="zero();">0</button></td>
           </tr>
         </tbody>
-      <table>
+      </table>
     </body>
-  <footer>
-  </footer>
+    <footer>
+      <p class="footer">Pocket Calculator © 2018 Aidan Bennett.</p>
+      <p class="footer">Contact information: <a href=mailto:calculator@calculator.com>calculator@calculator.com</a></p>
+      <p class="footer"><a href="https://www.ucvts.tec.nj.us/">UCVTS</a> | <a href="https://www.ucvts.tec.nj.us/domain/16"#"calendar4326/20181004/month">AIT</a></p>
+    </footer>
 </html>
