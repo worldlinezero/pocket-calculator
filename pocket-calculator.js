@@ -1,7 +1,3 @@
-function calcDisplay{
-//this is the display of the calculator (duh)
-
-}
 
 function decimalization {
 //. button - adds a decimal point after an input (past tense) number
@@ -74,7 +70,7 @@ function seven {
 }
 
 function eight {
-  
+
 }
 
 function nine {
