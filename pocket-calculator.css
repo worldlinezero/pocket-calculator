@@ -1,5 +1,5 @@
 * {
-  color: #666699;
+  color: DimGray;
   position: relative;
 }
 
@@ -52,24 +52,62 @@ span.webdings2 {
   font-style: oblique;
 }
 
-canvas {
-  border-radius: 2;
-  border-style: double;
+table.calcDisplay {
+  height: 200px;
+  width: 400px;
+}
 
+table#calculator {
+  margin-top: auto;
+  margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: DimGray;
+  border-radius: 20px;
+  border-bottom: 25px;
+}
+
+p.calcDisplay {
+  font: digital-7;
+  background-color: #C19A6B;
+  color: Black;
+  caret-color: Black;
+}
+
+td.left {
+ margin-left: 50px;
+ margin-right: 5px;
+}
+
+td.middle {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+td.right {
+  margin-left: 5px;
+  margin-right: 50px
 }
 
 button {
   font: cornerstone;
+  font-size: 36px;
   height: 100px;
   width: 100px;
+  color: black;
+  background-color: LightGray;
   text-align: center;
   align-items: center;
   border-radius: 12px;
   border-width: 2px;
   border-style: solid;
+  border-spacing: 25px;
+  border-color: #343434;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
   box-shadow: 0 5px #888888;
-  border-color: DimGray;
-  background-color:
 }
 
 td > button.operation {
@@ -87,12 +125,20 @@ td > button#zero {
 
 }
 
+td > button#subtraction {
+    vertical-align: text-top
+}
+
+button:hover {
+  transition: color ease 0.5s;
+}
+
 button.operation:hover {
- background-color: Chocolate;
+  background-color: Chocolate;
 }
 
 button.nonzero:hover {
-
+  background-color: #939393;
 }
 
 .footer {
