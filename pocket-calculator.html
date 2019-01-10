@@ -6,13 +6,13 @@
   </head>
     <body>
       <div id="header1">
-        <h2><span class="webdings1">7</span> POCKET CALCULATOR <span class="webdings2">8</span></h2>
+        <h2>&#11000; POCKET CALCULATOR &#10999;</span></h2>
         <h5>by Aidan Bennett</h5>
       </div>
       <table id="calculator">
         <tbody>
           <tr>
-            <td><p class="calcDisplay"></p></td>
+            <td><p id="calcDisplay"></p></td>
           </tr>
           <tr>
             <td><button class="operation" onclick="cancellation();">A/C</button></td>
@@ -20,37 +20,37 @@
             <td><button class="operation" onclick="summation();">=</button></td>
             <td><button class="operation" onclick="percentagization();">%</button></td>
           </tr>
-          <tr>
-            <td><button class="operation" onclick="addition();">+</button></td>
-            <td><button class="operation" id="subtraction" onclick="subtraction();">&#9602;</button></td>
-            <td><button class="operation" onclick="multiplication();">X</button></td>
-            <td><button class="operation" onclick="division();">÷</button></td>
-          </tr>
-          <tr> <!-- I have blank table cells here to provide adequate spacing to the number buttons.-->
+          <tr> <!-- I have a blank table cell here to provide adequate spacing to the double-wide zero button.-->
             <td><button class="nonzero left" onclick="nine();">9</button></td>
             <td><button class="nonzero middle" onclick="eight();">8</button></td>
             <td><button class="nonzero right" onclick="seven();">7</button></td>
+            <td><button class="operation" onclick="addition();">+</button></td>
           </tr>
           <tr>
             <td><button class="nonzero left" onclick="six();">6</button></td>
             <td><button class="nonzero middle" onclick="five();">5</button></td>
             <td><button class="nonzero right" onclick="four();">4</button></td>
+            <td><button class="operation" id="subtraction" onclick="subtraction();">&#8722;</button></td>
           </tr>
           <tr>
             <td><button class="nonzero left" onclick="three();">3</button></td>
             <td><button class="nonzero middle" onclick="two();">2</button></td>
             <td><button class="nonzero right" onclick="one();">1</button></td>
+            <td><button class="operation" onclick="multiplication();">X</button></td>
+
           </tr>
           <tr>
-            <td><button onclick="decimalization();">.</button></td>
+            <td><button class="nonzero" onclick="decimalization();">.</button></td>
             <td><button id="zero" onclick="zero();">0</button></td>
+            <td></td>
+            <td><button class="operation" onclick="division();">÷</button></td>
           </tr>
         </tbody>
       </table>
     </body>
     <footer>
       <p class="footer">Pocket Calculator © 2018 Aidan Bennett.</p>
-      <p class="footer">Contact information: <a href=mailto:calculator@calculator.com>calculator@calculator.com</a></p>
-      <p class="footer"><a href="https://www.ucvts.tec.nj.us/">UCVTS</a> | <a href="https://www.ucvts.tec.nj.us/domain/16"#"calendar4326/20181004/month">AIT</a></p>
+      <p class="footer">&#11000; Contact information: <a href=mailto:calculator@calculator.com>calculator@calculator.com</a> &#10999;</p>
+      <p class="footer"><a href="https://www.ucvts.tec.nj.us/">UCVTS</a> | <a href="https://www.ucvts.tec.nj.us/domain/16""calendar4326/20181004/month">AIT</a></p>
     </footer>
 </html>
