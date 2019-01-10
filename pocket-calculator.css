@@ -1,5 +1,5 @@
 * {
-  color: DimGray;
+
   position: relative;
 }
 
@@ -9,13 +9,12 @@ src: url("./pocket-calculator/fonts/digital-7.ttf");
 }
 
 @font-face {
-font-family: "Webdings";
-src: url("./pocket-calculator/fonts/webdings.ttf");
-}
-
-@font-face {
 font-family: "Cornerstone";
 src: url("./pocket-calculator/fonts/cornerstone.ttf");
+}
+
+a {
+  color: Black;
 }
 
 a[href*="ucvts"] {
@@ -31,7 +30,8 @@ a[href*="calculator"] {
 body {
  text-align: center;
  font-weight: bold;
- font-size: 12pt
+ font-size: 12pt;
+ background: #CCCCFF;
 }
 
 div.header1 {
@@ -40,19 +40,7 @@ div.header1 {
   font-family: monospace;
 }
 
-span.webdings1 {
-  line-height: 0.5;
-  font: webdings;
-  font-style: oblique;
-}
-
-span.webdings2 {
-  line-height: 0.5;
-  font: webdings;
-  font-style: oblique;
-}
-
-table.calcDisplay {
+table#calcDisplay {
   height: 200px;
   width: 400px;
 }
@@ -98,11 +86,11 @@ button {
   background-color: LightGray;
   text-align: center;
   align-items: center;
-  border-radius: 12px;
   border-width: 2px;
   border-style: solid;
   border-spacing: 25px;
   border-color: #343434;
+  border-radius: 5px;
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 10px;
@@ -117,16 +105,16 @@ td > button.operation {
   box-shadow: 0 5px #aa5a00;
 }
 
-td > button.nonzero {
-
-}
-
 td > button#zero {
-
+  width: 150%;
 }
 
 td > button#subtraction {
     vertical-align: text-top
+}
+
+button:focus {
+  outline: 0;
 }
 
 button:hover {
@@ -141,7 +129,12 @@ button.nonzero:hover {
   background-color: #939393;
 }
 
+button#zero:hover {
+  background-color: #939393
+}
+
 .footer {
   text-align: center;
-  color: DarkGray;
+  margin-left: 5px;
+  margin-right: 5px;
 }
