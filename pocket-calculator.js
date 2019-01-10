@@ -1,4 +1,7 @@
-
+function enterNos {
+//calculator display function
+document.getElementById("calcDisplay").innerHTML =
+}
 function decimalization {
 //. button - adds a decimal point after an input (past tense) number
 
@@ -36,9 +39,11 @@ function negation {
 
 function cancellation {
 //A/C button - clears current display and all memory
-const canvas = document.getElementById("calcDisplay");
-const ctx = canvas.getContext("2d");
-ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+}
+
+function clearDisplay {
+
 }
 
 function one {
