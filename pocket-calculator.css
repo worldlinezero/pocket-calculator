@@ -38,14 +38,19 @@ div.header1 {
   line-height: 0.5;
   font: times;
   font-family: monospace;
+  text-decoration: underline;
+  text-decoration-style: double;
 }
 
-table#calcDisplay {
-  height: 200px;
-  width: 400px;
+th#calcDisplay {
+  height: 170px;
+  width: 370px;
+  background-color: LightGray;
+  border-radius: 25px;
 }
 
 table#calculator {
+  transform: scale(0.85);
   margin-top: auto;
   margin-bottom: 25px;
   margin-left: auto;
@@ -101,12 +106,13 @@ button {
 td > button.operation {
   height: 100px;
   width: 150px;
-  background-color: #ff6e27 ;
+  background-color: #ff6e27;
   box-shadow: 0 5px #aa5a00;
 }
 
 td > button#zero {
   width: 150%;
+  margin-left: 46px;
 }
 
 td > button#subtraction {
