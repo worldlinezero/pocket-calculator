@@ -5,15 +5,15 @@
     <script type="text/javascript" src="pocket-calculator.js"></script>
   </head>
     <body>
-      <div id="header1">
+      <div class="header1">
         <h2>&#11000; POCKET CALCULATOR &#10999;</span></h2>
         <h5>by Aidan Bennett</h5>
       </div>
       <table id="calculator">
+        <thead>
+          <th id="calcDisplay" colspan="4" rowspan="1" onload="calcDisplay();"></th>
+        </thead>
         <tbody>
-          <tr>
-            <td><p id="calcDisplay"></p></td>
-          </tr>
           <tr>
             <td><button class="operation" onclick="cancellation();">A/C</button></td>
             <td><button class="operation" onclick="negation();">⁺∕₋</button></td>
