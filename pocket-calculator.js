@@ -1,7 +1,9 @@
-function enterNos {
+
+function calcDisplay {
 //calculator display function
-document.getElementById("calcDisplay").innerHTML =
+document.getElementById("calcDisplay").innerHTML = " ";
 }
+
 function decimalization {
 //. button - adds a decimal point after an input (past tense) number
 
@@ -83,5 +85,9 @@ function nine {
 }
 
 function zero {
+
+}
+
+function syntaxError {
 
 }
