@@ -1,16 +1,15 @@
 * {
-
   position: relative;
 }
 
 @font-face {
-font-family: "Digital-7";
-src: url("./pocket-calculator/fonts/digital-7.ttf");
+  font-family: "Digital-7";
+  src: url("fonts/digital-7.ttf") format("truetype");
 }
 
 @font-face {
-font-family: "Cornerstone";
-src: url("./pocket-calculator/fonts/cornerstone.ttf");
+  font-family: "Cornerstone";
+  src: url("fonts/cornerstone.ttf") format("truetype")
 }
 
 a {
@@ -24,14 +23,14 @@ a[href*="ucvts"] {
 
 a[href*="calculator"] {
   font-style: bold;
-  font: cornerstone;
+  font-family: "Cornerstone";
 }
 
 body {
- text-align: center;
- font-weight: bold;
- font-size: 12pt;
- background: #CCCCFF;
+  text-align: center;
+  font-weight: bold;
+  font-size: 12pt;
+  background: #CCCCFF;
 }
 
 div.header1 {
@@ -42,11 +41,25 @@ div.header1 {
   text-decoration-style: double;
 }
 
-th#calcDisplay {
-  height: 170px;
-  width: 370px;
-  background-color: LightGray;
+th > button#invisible {
+  visibility: hidden;
+  height: 1px;
+}
+
+td > button#invisible {
+  visibility: hidden;
+  height: 1px;
+  width: 1px;
+}
+
+td#calcDisplay {
+  transform: scale(100%);
+  background-color: LightBlue;
   border-radius: 25px;
+  margin-top: 25px;
+  height: 100px;
+  font-family: "Digital-7";
+  font-size: 36px;
 }
 
 table#calculator {
@@ -58,13 +71,6 @@ table#calculator {
   background-color: DimGray;
   border-radius: 20px;
   border-bottom: 25px;
-}
-
-p.calcDisplay {
-  font: digital-7;
-  background-color: #C19A6B;
-  color: Black;
-  caret-color: Black;
 }
 
 td.left {
@@ -83,7 +89,7 @@ td.right {
 }
 
 button {
-  font: cornerstone;
+  font-family: "Cornerstone";
   font-size: 36px;
   height: 100px;
   width: 100px;
@@ -108,6 +114,10 @@ td > button.operation {
   width: 150px;
   background-color: #ff6e27;
   box-shadow: 0 5px #aa5a00;
+}
+
+button.needsbold {
+  font-weight: 700;
 }
 
 td > button#zero {
