@@ -5,16 +5,16 @@
     <script type="text/javascript" src="pocket-calculator.js"></script>
   </head>
     <body>
-      <div class="header1">
-        <h2>&#11000; POCKET CALCULATOR &#10999;</span></h2>
-        <h5>by Aidan Bennett</h5>
+        <h1>&#11000;<span class="header1"> POCKET CALCULATOR </span>&#10999;</h1>
+        <p></p>
+        <h3>by Aidan Bennett</h3>
       </div>
       <table id="calculator">
         <thead>
           <th><button id="invisible"> </button></th>
         </thead>
           <tr>
-            <td id="calcDisplay" colspan="4" rowspan="1" onload="calcDisplay();">0</td>
+            <td id="calcDisplay" colspan="4" rowspan="1" align="center" onload="calcDisplay();">0</td>
           </tr>
         <tbody>
           <tr>
@@ -42,8 +42,8 @@
             <td><button class="operation" onclick="multiplication();">X</button></td>
           </tr>
           <tr>
+            <td><button id="zero" class="left" onclick="zero();">0</button></td>
             <td><button class="nonzero" onclick="decimalization();">.</button></td>
-            <td><button id="zero" onclick="zero();">0</button></td>
             <td></td>
             <td><button class="operation needsbold" onclick="division();">÷</button></td>
           </tr>
@@ -52,7 +52,6 @@
     </body>
     <footer>
       <p class="footer">Pocket Calculator © 2018 Aidan Bennett.</p>
-      <p class="footer">&#11000; Contact information: <a href=mailto:calculator@calculator.com>calculator@calculator.com</a> &#10999;</p>
       <p class="footer"><a href="https://www.ucvts.tec.nj.us/">UCVTS</a> | <a href="https://www.ucvts.tec.nj.us/domain/16""calendar4326/20181004/month">AIT</a></p>
     </footer>
 </html>
