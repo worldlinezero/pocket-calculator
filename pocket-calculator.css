@@ -9,41 +9,48 @@
 
 @font-face {
   font-family: "Cornerstone";
-  src: url("fonts/cornerstone.ttf") format("truetype")
+  src: url("fonts/cornerstone.ttf") format("truetype");
 }
 
-a {
-  color: Black;
+/* this is the font used for the logo of destiny 2: forsaken. space shooter.*/
+@font-face {
+    font-family: "Exodus";
+    src: url("fonts/exodus.otf") format("otf");
 }
 
+/* fun fact: #FFF8E7 is known as "cosmic latte" and is the average color of the universe as gathered from analyses of light from over 200,000 galaxies.*/
 a[href*="ucvts"] {
+  color: #FFF8E7;
   font-style: italic;
   font: courier;
-}
-
-a[href*="calculator"] {
-  font-style: bold;
-  font-family: "Cornerstone";
 }
 
 body {
   text-align: center;
   font-weight: bold;
   font-size: 12pt;
-  background: #CCCCFF;
+  background-image: url("image/heic1509a_0.jpg");
+  background-size: cover;
 }
 
-div.header1 {
-  line-height: 0.5;
-  font: times;
-  font-family: monospace;
-  text-decoration: underline;
-  text-decoration-style: double;
+body > h1, h3 {
+  color: #FFF8E7;
+  margin-bottom: -15px;
+}
+
+span.header1 {
+  line-height: 1.5;
+  font-family: "Exodus";
+  color: #FFF8E7;
+  margin-bottom: -40px;
+  border-radius: 12.5px;
+  border-color: rgba(0,0,0,0.5);
 }
 
 th > button#invisible {
   visibility: hidden;
-  height: 1px;
+  margin-bottom: -8px;
+  height: 0.2px;
 }
 
 td > button#invisible {
@@ -54,28 +61,33 @@ td > button#invisible {
 
 td#calcDisplay {
   transform: scale(100%);
-  background-color: LightBlue;
-  border-radius: 25px;
-  margin-top: 25px;
+  background-color: rgba(0,0,0,0.8);
+  color: #FFF8E7;
+  text-align: right;
+  border-radius: 12.5px;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
   height: 100px;
   font-family: "Digital-7";
-  font-size: 36px;
+  font-size: 100px;
 }
 
 table#calculator {
-  transform: scale(0.85);
-  margin-top: auto;
-  margin-bottom: 25px;
+  text-align: right;
+  transform: scale(0.7);
+  margin-top: -60px;
+  margin-bottom: -80px;
   margin-left: auto;
   margin-right: auto;
-  background-color: DimGray;
+  background-color: rgba(0,0,0,0);
   border-radius: 20px;
   border-bottom: 25px;
 }
 
 td.left {
- margin-left: 50px;
- margin-right: 5px;
+  margin-left: 50px;
+  margin-right: 5px;
 }
 
 td.middle {
@@ -93,8 +105,8 @@ button {
   font-size: 36px;
   height: 100px;
   width: 100px;
-  color: black;
-  background-color: LightGray;
+  color: #FFF8E7;
+  background-color: #19b2ff;
   text-align: center;
   align-items: center;
   border-width: 2px;
@@ -106,14 +118,14 @@ button {
   margin-bottom: 10px;
   margin-left: 10px;
   margin-right: 10px;
-  box-shadow: 0 5px #888888;
+  box-shadow: 0 5px #004466;
 }
 
 td > button.operation {
   height: 100px;
   width: 150px;
-  background-color: #ff6e27;
-  box-shadow: 0 5px #aa5a00;
+  background-color: #512888;
+  box-shadow: 0 5px #301851;
 }
 
 button.needsbold {
@@ -122,7 +134,7 @@ button.needsbold {
 
 td > button#zero {
   width: 150%;
-  margin-left: 46px;
+  margin-right: 46px;
 }
 
 td > button#subtraction {
@@ -138,18 +150,16 @@ button:hover {
 }
 
 button.operation:hover {
-  background-color: Chocolate;
+  background-color: #301851;
 }
 
 button.nonzero:hover {
-  background-color: #939393;
-}
-
-button#zero:hover {
-  background-color: #939393
+  background-color: #004466;
 }
 
 .footer {
+  color: #FFF8E7;
+  font: times;
   text-align: center;
   margin-left: 5px;
   margin-right: 5px;
