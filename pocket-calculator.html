@@ -5,53 +5,60 @@
     <script type="text/javascript" src="pocket-calculator.js"></script>
   </head>
     <body>
-        <h1>&#11000;<span class="header1"> POCKET CALCULATOR </span>&#10999;</h1>
+        <!--the font i'm using for the header only works with lowercase letters.-->
+        <h1><span class="header1">p o c k e t&nbsp;&nbsp;&nbsp;c a l c u l a t o r</span></h1>
         <p></p>
-        <h3>by Aidan Bennett</h3>
+        <h3>b y&nbsp;&nbsp;a i d a n&nbsp;&nbsp;b e n n e t t</h3>
       </div>
       <table id="calculator">
         <thead>
           <th><button id="invisible"> </button></th>
         </thead>
           <tr>
-            <td id="calcDisplay" colspan="4" rowspan="1" align="center" onload="calcDisplay();">0</td>
+            <td id="calcDisplay" colspan="4" rowspan="1" min="1" max="9" align="center" onload="calcDisplay();">0</td>
           </tr>
         <tbody>
           <tr>
-            <td><button class="operation" onclick="cancellation();">A/C</button></td>
-            <td><button class="operation needsbold" onclick="negation();"><strong>⁺∕₋</strong></button></td>
-            <td><button class="operation" onclick="summation();">=</button></td>
-            <td><button class="operation" onclick="percentagization();">%</button></td>
-          </tr>
-          <tr> <!-- I have a blank table cell here to provide adequate spacing to the double-wide zero button.-->
-            <td><button class="nonzero left" onclick="nine();">9</button></td>
-            <td><button class="nonzero middle" onclick="eight();">8</button></td>
-            <td><button class="nonzero right" onclick="seven();">7</button></td>
-            <td><button class="operation" onclick="addition();">+</button></td>
+            <!--all button ids are the same as the functions they use, for clarity.-->
+            <td><button id="cancellation" class="operation" onclick="cancellation();">A/C</button></td>
+            <td><button id="negation" class="operation needsbold" onclick="negation();"><strong>⁺∕₋</strong></button></td>
+            <td><button id="summation" class="operation" onclick="summation();">=</button></td>
+            <td><button id="percentagization" class="operation" onclick="percentagization();">%</button></td>
           </tr>
           <tr>
-            <td><button class="nonzero left" onclick="six();">6</button></td>
-            <td><button class="nonzero middle" onclick="five();">5</button></td>
-            <td><button class="nonzero right" onclick="four();">4</button></td>
-            <td><button class="operation needsbold" id="subtraction" onclick="subtraction();">&#8722;</button></td>
+            <!--number keys are laid out like a phone keypad. at least, that's what i had in mind when i designed it.-->
+            <td><button id="nine" class="nonzero left" onclick="nine();">9</button></td>
+            <td><button id="eight" class="nonzero middle" onclick="eight();">8</button></td>
+            <td><button id="seven" class="nonzero right" onclick="seven();">7</button></td>
+            <td><button id="addition" class="operation" onclick="addition();">+</button></td>
           </tr>
           <tr>
-            <td><button class="nonzero left" onclick="three();">3</button></td>
-            <td><button class="nonzero middle" onclick="two();">2</button></td>
-            <td><button class="nonzero right" onclick="one();">1</button></td>
-            <td><button class="operation" onclick="multiplication();">X</button></td>
+            <td><button id="six" class="nonzero left" onclick="six();">6</button></td>
+            <td><button id="five" class="nonzero middle" onclick="five();">5</button></td>
+            <td><button id="four" class="nonzero right" onclick="four();">4</button></td>
+            <!--i used a minus sign from unicode instead of a hyphen for the subtraction button because i thought it looked better.-->
+            <td><button id="subtraction" class="operation needsbold" id="subtraction" onclick="subtraction();">&#8722;</button></td>
           </tr>
           <tr>
+            <td><button id="three" class="nonzero left" onclick="three();">3</button></td>
+            <td><button id="two" class="nonzero middle" onclick="two();">2</button></td>
+            <td><button id="one" class="nonzero right" onclick="one();">1</button></td>
+            <td><button id="multiplication" class="operation" onclick="multiplication();">X</button></td>
+          </tr>
+          <tr>
+            <!-- the zero key was more of a space-filler than anything, asethetic-wise.-->
             <td><button id="zero" class="left" onclick="zero();">0</button></td>
-            <td><button class="nonzero" onclick="decimalization();">.</button></td>
-            <td></td>
-            <td><button class="operation needsbold" onclick="division();">÷</button></td>
+            <!-- I have a blank button here to provide adequate spacing to the decimal button from the double-wide zero button.-->
+            <td><button class="invisible"></button></td>
+            <td><button id="decimalization" class="operation" onclick="decimalization();">.</button></td>
+            <td><button id="division" class="operation needsbold" onclick="division();">÷</button></td>
+          </tr>
+          <tr>
+            <td><button id="openparan" class="paran left" onclick="openparan();">(</button></td>
+            <td><button class="invisible"></button></td>
+            <td><button id="closeparan paranleft" class="paran right" onclick="closeparan();">)</button></td>
           </tr>
         </tbody>
       </table>
     </body>
-    <footer>
-      <p class="footer">Pocket Calculator © 2018 Aidan Bennett.</p>
-      <p class="footer"><a href="https://www.ucvts.tec.nj.us/">UCVTS</a> | <a href="https://www.ucvts.tec.nj.us/domain/16""calendar4326/20181004/month">AIT</a></p>
-    </footer>
 </html>
