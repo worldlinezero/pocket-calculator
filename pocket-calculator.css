@@ -51,7 +51,7 @@ td > button.invisible {
   height: 1px;
   width: 1px;
   display: block;
-  z-index: 2;
+  z-index: 1;
 }
 
 td#calcDisplay {
@@ -114,6 +114,7 @@ button {
   margin-right: 10px;
   box-shadow: 0 5px #004466;
   font-size: 50px;
+  z-index: 2;
 }
 
 td > button.operation {
