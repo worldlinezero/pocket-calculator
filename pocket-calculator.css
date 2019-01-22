@@ -12,17 +12,9 @@
   src: url("fonts/cornerstone.ttf") format("truetype");
 }
 
-/* this is the font used for the logo of destiny 2: forsaken. space shooter.*/
 @font-face {
-    font-family: "Exodus";
-    src: url("fonts/exodus.otf") format("otf");
-}
-
-/* fun fact: #FFF8E7 is known as "cosmic latte" and is the average color of the universe as gathered from analyses of light from over 200,000 galaxies.*/
-a[href*="ucvts"] {
-  color: #FFF8E7;
-  font-style: italic;
-  font: courier;
+    font-family: "Orena";
+    src: url("fonts/orena.ttf") format("truetype");
 }
 
 body {
@@ -31,20 +23,20 @@ body {
   font-size: 12pt;
   background-image: url("image/heic1509a_0.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
+/* fun fact: #FFF8E7 is known as "cosmic latte" and is the average color of the universe as gathered from analyses of light from over 200,000 galaxies.*/
 body > h1, h3 {
   color: #FFF8E7;
+  font-family: "Orena";
   margin-bottom: -15px;
 }
 
 span.header1 {
-  line-height: 1.5;
-  font-family: "Exodus";
+  line-height: 1.5;;
   color: #FFF8E7;
   margin-bottom: -40px;
-  border-radius: 12.5px;
-  border-color: rgba(0,0,0,0.5);
 }
 
 th > button#invisible {
@@ -53,10 +45,13 @@ th > button#invisible {
   height: 0.2px;
 }
 
-td > button#invisible {
+td > button.invisible {
+  position: relative;
   visibility: hidden;
   height: 1px;
   width: 1px;
+  display: block;
+  z-index: 2;
 }
 
 td#calcDisplay {
@@ -76,8 +71,7 @@ td#calcDisplay {
 table#calculator {
   text-align: right;
   transform: scale(0.7);
-  margin-top: -60px;
-  margin-bottom: -80px;
+  margin-top: -90px;
   margin-left: auto;
   margin-right: auto;
   background-color: rgba(0,0,0,0);
@@ -104,7 +98,7 @@ button {
   font-family: "Cornerstone";
   font-size: 36px;
   height: 100px;
-  width: 100px;
+  width: 150px;
   color: #FFF8E7;
   background-color: #19b2ff;
   text-align: center;
@@ -119,11 +113,10 @@ button {
   margin-left: 10px;
   margin-right: 10px;
   box-shadow: 0 5px #004466;
+  font-size: 50px;
 }
 
 td > button.operation {
-  height: 100px;
-  width: 150px;
   background-color: #512888;
   box-shadow: 0 5px #301851;
 }
@@ -133,12 +126,26 @@ button.needsbold {
 }
 
 td > button#zero {
-  width: 150%;
+  width: 190%;
   margin-right: 46px;
 }
 
+td > button#decimal {
+  margin-right: -25px;
+}
+
 td > button#subtraction {
-    vertical-align: text-top
+  vertical-align: text-top
+}
+
+td > button.paran {
+  width: 190%;
+  background-color: #512888;
+  box-shadow: 0 5px #301851;
+}
+
+td > button#paranleft {
+  align-content: left;
 }
 
 button:focus {
@@ -157,10 +164,10 @@ button.nonzero:hover {
   background-color: #004466;
 }
 
-.footer {
-  color: #FFF8E7;
-  font: times;
-  text-align: center;
-  margin-left: 5px;
-  margin-right: 5px;
+button#zero:hover {
+  background-color: #004466;
+}
+
+button.paran:hover {
+  background-color: #301851;
 }
