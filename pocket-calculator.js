@@ -1,93 +1,321 @@
+let string = "";
+var calcState = 0
+let calcMemSave= "";
+let opUseState = 0;
+var pointUseState = false;
+var calcClear = false;
 
-function calcDisplay {
-//calculator display function
-document.getElementById("calcDisplay").innerHTML = " ";
+function openparan () {
+  if (calcState == 1) {
+    string = "("
+  } else {
+    if (opUseState == 1) {
+      opUseState = 0;
+      string = calcMemSave;
+    }
+    if (pointUseState == 1) {
+      pointUseState = 0;
+      string = calcMemSave;
+    }
+    string += "("
+  }
+  var div = document.getElementById("calcDisplay");
+  div.innerHTML = string;
 }
 
-function decimalization {
-//. button - adds a decimal point after an input (past tense) number
-
+function closeparan () {
+  if (calcState == 1) {
+    string = ")"
+  } else {
+    if (opUseState == 1) {
+      opUseState = 0;
+      string = calcMemSave;
+    }
+    if (pointUseState == 1) {
+      pointUseState = 0;
+      string = calcMemSave;
+    }
+    string += ")"
+  }
+  var div = document.getElementById("calcDisplay");
+  div.innerHTML = string;
 }
 
-function addition {
-//+ button - multiplies a number by another number
-
+function zero () {
+  if (calcState == 1) {
+    string = "0"
+  } else {
+    if (opUseState == 1) {
+      opUseState = 0;
+      string = calcMemSave;
+    }
+    if (pointUseState == 1) {
+      pointUseState = 0;
+      string = calcMemSave;
+    }
+    string += "0"
+  }
+  var div = document.getElementById("calcDisplay");
+  div.innerHTML = string;
 }
 
-function subtract {
-//- button - multiplies a number by another number
-
+function one() {
+  if (calcState == 1) {
+    string = "1"
+  } else {
+    if (opUseState == 1) {
+      opUseState = 0;
+      string = calcMemSave;
+    }
+    if (pointUseState == 1) {
+      pointUseState = 0;
+      string = calcMemSave;
+    }
+    string += "1"
+  }
+  var div = document.getElementById("calcDisplay");
+  div.innerHTML = string;
 }
 
-function multiplication {
-//* button - multiplies a number by another number
-
+function two() {
+  if (calcState == 1) {
+    string = "2"
+  } else {
+    if (opUseState == 1) {
+      opUseState = 0;
+      string = calcMemSave;
+    }
+    if (pointUseState == 1) {
+      pointUseState = 0;
+      string = calcMemSave;
+    }
+    string += "2"
+  }
+  var div = document.getElementById("calcDisplay");
+  div.innerHTML = string;
 }
 
-function division {
-//÷ button - divides a number by another number
-
+function three() {
+  if (calcState == 1) {
+    string = "3"
+  } else {
+    if (opUseState == 1) {
+      opUseState = 0;
+      string = calcMemSave;
+    }
+    if (pointUseState == 1) {
+      pointUseState = 0;
+      string = calcMemSave;
+    }
+  string += "3"
+  }
+  var div = document.getElementById("calcDisplay");
+  div.innerHTML = string;
 }
 
-function summation {
-//= button - finds the sum of an equation
-
+function four() {
+  if (calcState == 1) {
+    string = "4"
+  } else {
+    if (opUseState == 1) {
+      opUseState = 0;
+      string = calcMemSave;
+    }
+    if (pointUseState == 1) {
+      pointUseState = 0;
+      string = calcMemSave;
+    }
+  string += "4"
+  }
+  var div = document.getElementById("calcDisplay");
+  div.innerHTML = string;
 }
 
-function negation {
-//+/= button - makes positive numbers negative and vice versa
-
+function five() {
+  if (calcState == 1) {
+    string = "5"
+  } else {
+    if (opUseState == 1) {
+      opUseState = 0;
+      string = calcMemSave;
+    }
+     if (pointUseState == 1) {
+      pointUseState = 0;
+      string = calcMemSave;
+    }
+  string += "5"
+  }
+  var div = document.getElementById("calcDisplay");
+  div.innerHTML = string;
 }
 
-function cancellation {
-//A/C button - clears current display and all memory
-
+function six() {
+  if (calcState == 1) {
+    string = "6"
+  } else {
+    if (opUseState == 1) {
+    opUseState = 0;
+    string = calcMemSave;
+    }
+    if (pointUseState == 1) {
+      pointUseState = 0;
+      string = calcMemSave;
+    }
+  string += "6"
+  }
+  var div = document.getElementById("calcDisplay");
+  div.innerHTML = string;
 }
 
-function clearDisplay {
-
+function seven() {
+  if (calcState == 1) {
+    string = "7"
+  } else {
+    if (opUseState == 1) {
+      opUseState = 0;
+      string = calcMemSave;
+    }
+    if (pointUseState == 1) {
+      pointUseState = 0;
+      string = calcMemSave;
+    }
+  string += "7"
+  }
+  var div = document.getElementById("calcDisplay");
+  div.innerHTML = string;
 }
 
-function one {
-
+function eight() {
+  if (calcState == 1) {
+    string = "8"
+  } else {
+    if (opUseState == 1) {
+      string = calcMemSave;
+      opUseState = 0;
+    }
+    if (pointUseState == 1) {
+      pointUseState = 0;
+      string = calcMemSave;
+    }
+  string += "8"
+  }
+  var div = document.getElementById("calcDisplay");
+  div.innerHTML = string;
 }
 
-function two {
-
+function nine() {
+  if (calcState == 1) {
+    string = "9"
+  } else {
+    if (opUseState == 1) {
+      string = calcMemSave;
+      opUseState = 0;
+    }
+    if (pointUseState == 1) {
+      pointUseState = 0;
+      string = calcMemSave;
+    }
+    string += "9"
+  }
+  var div = document.getElementById("calcDisplay");
+  div.innerHTML = string;
 }
 
-function three {
-
+function cancellation() {
+  var div = document.getElementById("calcDisplay");
+  div.innerHTML = 0;
+  string = " "
+  calcMemSave = ""
+  opUseState = 0;
+  calcClear = true;
+  calcState = 0;
+  if (calcClear == true) {
+    pointUseState = false;
+    document.getElementById("decimalization").disabled = false;
+  }
 }
 
-function four {
-
+function multiplication() {
+  var div = document.getElementById("calcDisplay");
+  calcMemSave = string;
+  calcMemSave += "*"
+  div.innerHTML = calcMemSave;
+  calcState = 0;
+  opUseState = 1;
+  if (opUseState == 1) {
+    document.getElementById("decimalization").disabled = false;
+  }
 }
 
-function five {
-
+function addition() {
+  var div = document.getElementById("calcDisplay");
+  calcMemSave = string;
+  calcMemSave += "+"
+  div.innerHTML = calcMemSave;
+  calcState = 0;
+  opUseState = 1;
+  if (opUseState == 1) {
+    document.getElementById("decimalization").disabled = false;
+  }
 }
 
-function six {
-
+function division() {
+  var div = document.getElementById("calcDisplay");
+  calcMemSave = string;
+  calcMemSave += "/"
+  div.innerHTML = calcMemSave;
+  calcState = 0;
+  opUseState = 1;
+  if (opUseState == 1) {
+    document.getElementById("decimalization").disabled = false;
+  }
 }
 
-function seven {
-
+function subtraction() {
+  var div = document.getElementById("calcDisplay");
+  calcMemSave = string;
+  calcMemSave += "-"
+  div.innerHTML = calcMemSave;
+  calcState = 0;
+  opUseState = 1;
+  if (opUseState == 1) {
+    document.getElementById("decimalization").disabled = false;
+  }
 }
 
-function eight {
-
+function summation() {
+  var div= document.getElementById("calcDisplay");
+  string = eval(string);
+  div.innerHTML = Number(string).toLocaleString();
+  if (Number(string) > 0 && Number(string) < 1 && string.length >= 9) {
+    div.innerHTML = Math.floor(Number(string)).toExponential()
+  }
+  calcState = 1;
 }
 
-function nine {
-
+function negation() {
+  var div= document.getElementById("calcDisplay");
+  string = Number(string) * (-1);
+  div.innerHTML = string;
+  calcState = 0;
 }
 
-function zero {
-
+function decimalization() {
+  if (pointUseState == false){
+    var div = document.getElementById("calcDisplay");
+    calcMemSave = string;
+    calcMemSave += ".";
+    div.innerHTML = calcMemSave;
+    pointUseState = true;
+  }
+  if (pointUseState == true) {
+    document.getElementById("decimalization").disabled = true;
+  }
 }
 
-function syntaxError {
-
+function percentagization() {
+  var div = document.getElementById("calcDisplay");
+  string = Number(string) * (0.01)
+  div.innerHTML = string;
+  calcState = 0;
 }
