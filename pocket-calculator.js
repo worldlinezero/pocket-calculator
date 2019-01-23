@@ -1,230 +1,197 @@
-let string = "";
+let numOp = "";
 var calcState = 0
 let calcMemSave= "";
 let opUseState = 0;
 var pointUseState = false;
 var calcClear = false;
-
-function openparan () {
-  if (calcState == 1) {
-    string = "("
-  } else {
-    if (opUseState == 1) {
-      opUseState = 0;
-      string = calcMemSave;
-    }
-    if (pointUseState == 1) {
-      pointUseState = 0;
-      string = calcMemSave;
-    }
-    string += "("
-  }
-  var div = document.getElementById("calcDisplay");
-  div.innerHTML = string;
-}
-
-function closeparan () {
-  if (calcState == 1) {
-    string = ")"
-  } else {
-    if (opUseState == 1) {
-      opUseState = 0;
-      string = calcMemSave;
-    }
-    if (pointUseState == 1) {
-      pointUseState = 0;
-      string = calcMemSave;
-    }
-    string += ")"
-  }
-  var div = document.getElementById("calcDisplay");
-  div.innerHTML = string;
-}
+var error = false;
+var number = ""
 
 function zero () {
   if (calcState == 1) {
-    string = "0"
+    numOp = "0"
   } else {
     if (opUseState == 1) {
       opUseState = 0;
-      string = calcMemSave;
+      numOp = calcMemSave;
     }
     if (pointUseState == 1) {
       pointUseState = 0;
-      string = calcMemSave;
+      numOp = calcMemSave;
     }
-    string += "0"
+    numOp += "0"
   }
   var div = document.getElementById("calcDisplay");
-  div.innerHTML = string;
+  div.innerHTML = numOp;
 }
 
 function one() {
   if (calcState == 1) {
-    string = "1"
+    numOp = "1"
   } else {
     if (opUseState == 1) {
       opUseState = 0;
-      string = calcMemSave;
+      numOp = calcMemSave;
     }
     if (pointUseState == 1) {
       pointUseState = 0;
-      string = calcMemSave;
+      numOp = calcMemSave;
     }
-    string += "1"
+    numOp += "1"
   }
   var div = document.getElementById("calcDisplay");
-  div.innerHTML = string;
+  div.innerHTML = numOp;
 }
 
 function two() {
   if (calcState == 1) {
-    string = "2"
+    numOp = "2"
   } else {
     if (opUseState == 1) {
       opUseState = 0;
-      string = calcMemSave;
+      numOp = calcMemSave;
     }
     if (pointUseState == 1) {
       pointUseState = 0;
-      string = calcMemSave;
+      numOp = calcMemSave;
     }
-    string += "2"
+    numOp += "2"
   }
   var div = document.getElementById("calcDisplay");
-  div.innerHTML = string;
+  div.innerHTML = numOp;
 }
 
 function three() {
   if (calcState == 1) {
-    string = "3"
+    numOp = "3"
   } else {
     if (opUseState == 1) {
       opUseState = 0;
-      string = calcMemSave;
+      numOp = calcMemSave;
     }
     if (pointUseState == 1) {
       pointUseState = 0;
-      string = calcMemSave;
+      numOp = calcMemSave;
     }
-  string += "3"
+  numOp += "3"
   }
   var div = document.getElementById("calcDisplay");
-  div.innerHTML = string;
+  div.innerHTML = numOp;
 }
 
 function four() {
   if (calcState == 1) {
-    string = "4"
+    numOp = "4"
   } else {
     if (opUseState == 1) {
       opUseState = 0;
-      string = calcMemSave;
+      numOp = calcMemSave;
     }
     if (pointUseState == 1) {
       pointUseState = 0;
-      string = calcMemSave;
+      numOp = calcMemSave;
     }
-  string += "4"
+  numOp += "4"
   }
   var div = document.getElementById("calcDisplay");
-  div.innerHTML = string;
+  div.innerHTML = numOp;
 }
 
 function five() {
   if (calcState == 1) {
-    string = "5"
+    numOp = "5"
   } else {
     if (opUseState == 1) {
       opUseState = 0;
-      string = calcMemSave;
+      numOp = calcMemSave;
     }
      if (pointUseState == 1) {
       pointUseState = 0;
-      string = calcMemSave;
+      numOp = calcMemSave;
     }
-  string += "5"
+  numOp += "5"
   }
   var div = document.getElementById("calcDisplay");
-  div.innerHTML = string;
+  div.innerHTML = numOp;
 }
 
 function six() {
   if (calcState == 1) {
-    string = "6"
+    numOp = "6"
   } else {
     if (opUseState == 1) {
     opUseState = 0;
-    string = calcMemSave;
+    numOp = calcMemSave;
     }
     if (pointUseState == 1) {
       pointUseState = 0;
-      string = calcMemSave;
+      numOp = calcMemSave;
     }
-  string += "6"
+  numOp += "6"
   }
   var div = document.getElementById("calcDisplay");
-  div.innerHTML = string;
+  div.innerHTML = numOp;
 }
 
 function seven() {
   if (calcState == 1) {
-    string = "7"
+    numOp = "7"
   } else {
     if (opUseState == 1) {
       opUseState = 0;
-      string = calcMemSave;
+      numOp = calcMemSave;
     }
     if (pointUseState == 1) {
       pointUseState = 0;
-      string = calcMemSave;
+      numOp = calcMemSave;
     }
-  string += "7"
+  numOp += "7"
   }
   var div = document.getElementById("calcDisplay");
-  div.innerHTML = string;
+  div.innerHTML = numOp;
 }
 
 function eight() {
   if (calcState == 1) {
-    string = "8"
+    numOp = "8"
   } else {
     if (opUseState == 1) {
-      string = calcMemSave;
+      numOp = calcMemSave;
       opUseState = 0;
     }
     if (pointUseState == 1) {
       pointUseState = 0;
-      string = calcMemSave;
+      numOp = calcMemSave;
     }
-  string += "8"
+  numOp += "8"
   }
   var div = document.getElementById("calcDisplay");
-  div.innerHTML = string;
+  div.innerHTML = numOp;
 }
 
 function nine() {
   if (calcState == 1) {
-    string = "9"
+    numOp = "9"
   } else {
     if (opUseState == 1) {
-      string = calcMemSave;
+      numOp = calcMemSave;
       opUseState = 0;
     }
     if (pointUseState == 1) {
       pointUseState = 0;
-      string = calcMemSave;
+      numOp = calcMemSave;
     }
-    string += "9"
+    numOp += "9"
   }
   var div = document.getElementById("calcDisplay");
-  div.innerHTML = string;
+  div.innerHTML = numOp;
 }
+
 
 function cancellation() {
   var div = document.getElementById("calcDisplay");
   div.innerHTML = 0;
-  string = " "
+  numOp = " "
   calcMemSave = ""
   opUseState = 0;
   calcClear = true;
@@ -235,9 +202,27 @@ function cancellation() {
   }
 }
 
+function negation() {
+  var div= document.getElementById("calcDisplay");
+  numOp = Number(numOp) - 2(Number(numOp));
+  div.innerHTML = numOp;
+  calcState = 0;
+}
+
+
+function summation() {
+  var div= document.getElementById("calcDisplay");
+  numOp = eval(numOp);
+  div.innerHTML = Number(numOp).toLocaleString();
+  if (Number(numOp) > 0 && Number(numOp) < 1 && numOp.length >= 9) {
+    div.innerHTML = Math.floor(Number(numOp)).toExponential()
+  }
+  calcState = 1;
+}
+
 function multiplication() {
   var div = document.getElementById("calcDisplay");
-  calcMemSave = string;
+  calcMemSave = numOp;
   calcMemSave += "*"
   div.innerHTML = calcMemSave;
   calcState = 0;
@@ -249,7 +234,7 @@ function multiplication() {
 
 function addition() {
   var div = document.getElementById("calcDisplay");
-  calcMemSave = string;
+  calcMemSave = numOp;
   calcMemSave += "+"
   div.innerHTML = calcMemSave;
   calcState = 0;
@@ -261,7 +246,7 @@ function addition() {
 
 function division() {
   var div = document.getElementById("calcDisplay");
-  calcMemSave = string;
+  calcMemSave = numOp;
   calcMemSave += "/"
   div.innerHTML = calcMemSave;
   calcState = 0;
@@ -273,7 +258,7 @@ function division() {
 
 function subtraction() {
   var div = document.getElementById("calcDisplay");
-  calcMemSave = string;
+  calcMemSave = numOp;
   calcMemSave += "-"
   div.innerHTML = calcMemSave;
   calcState = 0;
@@ -283,27 +268,10 @@ function subtraction() {
   }
 }
 
-function summation() {
-  var div= document.getElementById("calcDisplay");
-  string = eval(string);
-  div.innerHTML = Number(string).toLocaleString();
-  if (Number(string) > 0 && Number(string) < 1 && string.length >= 9) {
-    div.innerHTML = Math.floor(Number(string)).toExponential()
-  }
-  calcState = 1;
-}
-
-function negation() {
-  var div= document.getElementById("calcDisplay");
-  string = Number(string) * (-1);
-  div.innerHTML = string;
-  calcState = 0;
-}
-
 function decimalization() {
   if (pointUseState == false){
     var div = document.getElementById("calcDisplay");
-    calcMemSave = string;
+    calcMemSave = numOp;
     calcMemSave += ".";
     div.innerHTML = calcMemSave;
     pointUseState = true;
@@ -315,7 +283,43 @@ function decimalization() {
 
 function percentagization() {
   var div = document.getElementById("calcDisplay");
-  string = Number(string) * (0.01)
-  div.innerHTML = string;
+  numOp = Number(numOp) * (0.01)
+  div.innerHTML = numOp;
   calcState = 0;
+}
+
+function openparan () {
+  if (calcState == 1) {
+    numOp = "("
+  } else {
+    if (opUseState == 1) {
+      opUseState = 0;
+      numOp = calcMemSave;
+    }
+    if (pointUseState == 1) {
+      pointUseState = 0;
+      numOp = calcMemSave;
+    }
+    numOp += "("
+  }
+  var div = document.getElementById("calcDisplay");
+  div.innerHTML = numOp;
+}
+
+function closeparan () {
+  if (calcState == 1) {
+    numOp = ")"
+  } else {
+    if (opUseState == 1) {
+      opUseState = 0;
+      numOp = calcMemSave;
+    }
+    if (pointUseState == 1) {
+      pointUseState = 0;
+      numOp = calcMemSave;
+    }
+    numOp += ")"
+  }
+  var div = document.getElementById("calcDisplay");
+  div.innerHTML = numOp;
 }
